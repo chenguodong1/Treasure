@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--DrawerLayout 抽屉-->
+<!--里面包括两个部分：1. 展示的布局，2. 侧滑的布局:侧滑菜单-->
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--主页面显示-->
+    <include
+        android:id="@+id/home"
+        layout="@layout/content_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!--采用Design包里面的控件NavigationView-->
+    <!--设置菜单项、添加头布局、设置item的文本等-->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:layout_marginTop="?attr/actionBarSize"
+        app:menu="@menu/menu_drawer"
+        app:headerLayout="@layout/layout_navi_header"
+        app:itemTextColor="@color/selector_nav_icon_colors"
+        ></android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>
